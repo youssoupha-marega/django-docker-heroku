@@ -68,3 +68,5 @@ def blogue_article_2(request):
 
 def blogue_article_3(request):
     return render(request, "blogue/article_3.html")
+
+#    
