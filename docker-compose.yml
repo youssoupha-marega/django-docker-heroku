@@ -9,10 +9,8 @@ services:
       - .:/app
     command: python manage.py runserver 0.0.0.0:8000
 
-  portfolio:
-    build: ./portfolio
-    ports:
-      - "8080:80"
+
+#(venv) C:\Users\ymarega\OneDrive - NORDIKeau\Bureau\Apprentissage\Django\django_docker_app>docker-compose up --build
 
 
 
