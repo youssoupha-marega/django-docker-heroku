@@ -1,8 +1,8 @@
 # heroku.yml
 
-build:
-  docker:
-    web: Dockerfile
+#build:
+#  docker:
+#    web: Dockerfile
 
-run:
-  web: gunicorn myproject.wsgi --log-file -
+#run:
+#  web: gunicorn myproject.wsgi --log-file -
