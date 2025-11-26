@@ -5,14 +5,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def home(request):
-    return render(request, 'home.html')
+def acceuil(request):
+    return render(request, 'acceuil.html')
 
-def about(request):
-    return render(request, 'about.html')
+def formation(request):
+    return render(request, 'formation.html')
+    
+def experience(request):
+    return render(request, 'experience.html')
 
-def projects(request):
-    return render(request, 'projects.html')
+def projet(request):
+    return render(request, 'projet.html')
 
 def contact(request):
     return render(request, 'contact.html')

@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   web:
@@ -8,6 +8,11 @@ services:
     volumes:
       - .:/app
     command: python manage.py runserver 0.0.0.0:8000
+
+  portfolio:
+    build: ./portfolio
+    ports:
+      - "8080:80"
 
 
 
