@@ -1,3 +1,5 @@
+# myapp/context_processors.py
+
 def menu_items(request):
     return {
         'menu_items': [

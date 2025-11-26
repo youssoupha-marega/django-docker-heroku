@@ -1,12 +1,143 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
+<style>
+    .portfolio-card {
+        background: #f8f9fa;
+        border: 1px solid #e1e1e1;
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
 
-<body>
-    <h1>Page Acceuil (en développement...)</h1>
+    .grid-wrapper {
+        margin-top: 10px;
+        /* petit espace sous le texte Profil */
+    }
+</style>
 
-</body>
+<div class="container mt-4">
 
+    <!-- Une seule row : photo + profil + grille dans la colonne de droite -->
+    <div class="row align-items-start">
+
+        <!-- Colonne gauche : photo + infos -->
+        <div class="col-md-4 text-center">
+
+            <img src="{% static 'img/photo_graduate_uqam_youssoupha_marega.png' %}"
+                class="rounded-circle img-fluid mb-3" style="max-width: 220px;">
+
+            <h2 class="h3 mb-1">Youssoupha Marega</h2>
+            <p class="text-muted mb-1">Scientifique de données</p>
+
+            <p class="text-muted">
+                <a href="https://www.nordikeau.com/" class="fw-semibold text-primary text-decoration-none"
+                    target="_blank">Nordikeau</a> – Montréal, Québec
+            </p>
+
+            <div class="mt-2 d-flex justify-content-center gap-3">
+                <a href="https://github.com/ymarega" target="_blank">
+                    <img src="{% static 'img/logo/github_2.png' %}" width="40" alt="GitHub">
+                </a>
+                <a href="mailto:youssoupha.marega@gmail.com">
+                    <img src="{% static 'img/logo/gmail.png' %}" width="35" alt="Gmail">
+                </a>
+                <a href="https://www.linkedin.com/in/youssoupha-marega/" target="_blank">
+                    <img src="{% static 'img/logo/linkedin.png' %}" width="35" alt="LinkedIn">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Colonne droite : Profil + grille 2x2 -->
+        <div class="col-md-8">
+
+            <h1 class="mb-3">Profil</h1>
+
+            <p class="mb-2">
+                Je suis data scientist spécialisé en modélisation statistique,
+                prévision de séries temporelles et MLOps.
+            </p>
+
+            <p class="mb-0">
+                Je travaille sur des projets combinant données, IA et impact opérationnel :
+
+            <p class="mb-0">
+                Je travaille sur des projets combinant données, IA et impact opérationnel :
+                énergie, eau potable, risques, optimisation et automatisation.
+            </p>
+
+            <p class="mb-0">
+                Je travaille sur des projets combinant données, IA et impact opérationnel :
+                énergie, eau potable, risques, optimisation et automatisation.
+            </p>
+
+
+
+            <!-- Grille 2×2 directement sous le profil -->
+            <div class="grid-wrapper">
+                <div class="row g-2">
+
+                    <!-- Formation -->
+                    <div class="col-md-6">
+                        <div class="portfolio-card h-100">
+                            <h3>Formation</h3>
+                            <ul class="mb-0">
+                                <li>M.Sc. Statistique — UQAM</li>
+                                <li>Licence Math/Stats</li>
+                                <li>IA & Machine Learning avancé</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Intérêts -->
+                    <div class="col-md-6">
+                        <div class="portfolio-card h-100">
+                            <h3>Intérêts</h3>
+                            <ul class="mb-0">
+                                <li>Time Series Forecasting</li>
+                                <li>Ville intelligente / Eau potable</li>
+                                <li>Entrepreneuriat data</li>
+                                <li>Mentorat & vulgarisation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Compétences -->
+                    <div class="col-md-6">
+                        <div class="portfolio-card h-100">
+                            <h3>Compétences</h3>
+                            <ul class="mb-0">
+                                <li>Data Science & ML</li>
+                                <li>Feature Engineering</li>
+                                <li>Gestion de projets data</li>
+                                <li>Communication des résultats</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Stack techniques -->
+                    <div class="col-md-6">
+                        <div class="portfolio-card h-100">
+                            <h3>Stack techniques</h3>
+                            <ul class="mb-0">
+                                <li>Python, MLflow, scikit-learn</li>
+                                <li>AWS (SageMaker, Lambda, S3)</li>
+                                <li>Docker, Git, CI/CD</li>
+                                <li>SQL, NoSQL, APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <!-- fin col-md-8 -->
+
+    </div> <!-- fin row -->
+
+</div>
 
 {% endblock %}
