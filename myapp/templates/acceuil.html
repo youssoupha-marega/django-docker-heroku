@@ -16,6 +16,31 @@
         margin-top: 10px;
         /* petit espace sous le texte Profil */
     }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        /* pour garder le ratio */
+    }
+
+    .icon-inline {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+        margin-right: 4px;
+        vertical-align: text-bottom;
+        /* pour bien aligner avec le texte */
+    }
+
+    .location-text {
+        font-size: 0.9rem;
+        /* un peu plus petit */
+        font-weight: 500;
+        /* semi-gras */
+        color: #6c757d;
+        /* gris Bootstrap */
+    }
 </style>
 
 <div class="container mt-4">
@@ -30,25 +55,28 @@
                 class="rounded-circle img-fluid mb-3" style="max-width: 220px;">
 
             <h2 class="h3 mb-1">Youssoupha Marega</h2>
+            <p class="location-text mb-1">
+                <img src="{% static 'img/logo/google_maps.png' %}" class="icon-inline" alt="Localisation">
+                Montréal, Québec, Canada
+            </p>
             <p class="text-muted mb-1">Scientifique de données</p>
 
             <p class="text-muted">
                 <a href="https://www.nordikeau.com/" class="fw-semibold text-primary text-decoration-none"
-                    target="_blank">Nordikeau</a> – Montréal, Québec
+                    target="_blank">Nordikeau</a>
             </p>
 
-            <div class="mt-2 d-flex justify-content-center gap-3">
+            <div class="mt-2 d-flex justify-content-center align-items-center gap-3">
                 <a href="https://github.com/ymarega" target="_blank">
-                    <img src="{% static 'img/logo/github_2.png' %}" width="40" alt="GitHub">
+                    <img src="{% static 'img/logo/github.png' %}" class="social-icon" alt="GitHub">
                 </a>
-                <a href="mailto:youssoupha.marega@gmail.com">
-                    <img src="{% static 'img/logo/gmail.png' %}" width="35" alt="Gmail">
+                <a href="mailto:youssoupha.marega@gmail.com" target="_blank">
+                    <img src="{% static 'img/logo/gmail.png' %}" class="social-icon" alt="Gmail">
                 </a>
                 <a href="https://www.linkedin.com/in/youssoupha-marega/" target="_blank">
-                    <img src="{% static 'img/logo/linkedin.png' %}" width="35" alt="LinkedIn">
+                    <img src="{% static 'img/logo/linkedin.png' %}" class="social-icon" alt="LinkedIn">
                 </a>
             </div>
-
         </div>
 
         <!-- Colonne droite : Profil + grille 2x2 -->
@@ -59,14 +87,6 @@
             <p class="mb-2">
                 Je suis data scientist spécialisé en modélisation statistique,
                 prévision de séries temporelles et MLOps.
-            </p>
-
-            <p class="mb-0">
-                Je travaille sur des projets combinant données, IA et impact opérationnel :
-
-            <p class="mb-0">
-                Je travaille sur des projets combinant données, IA et impact opérationnel :
-                énergie, eau potable, risques, optimisation et automatisation.
             </p>
 
             <p class="mb-0">
